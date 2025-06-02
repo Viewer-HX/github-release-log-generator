@@ -1,3 +1,4 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -20,7 +21,14 @@ wheels/
 *.egg
 MANIFEST
 
+# Environment variables and secrets
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Virtual environments
 .venv
 env/
 venv/
@@ -28,8 +36,41 @@ ENV/
 env.bak/
 venv.bak/
 
+# IDE and editor files
 .DS_Store
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
 *.log
 *.tmp
+logs/
+temp/
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py

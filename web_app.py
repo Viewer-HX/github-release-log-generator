@@ -1,8 +1,8 @@
 from flask import Flask, request, render_template, jsonify, flash, redirect, url_for
 import os
 import asyncio
-from crew import create_release_log_crew
-from config import GitHubRequest, Config
+from src.github_release_generator.crew import create_release_log_crew
+from src.github_release_generator.config import GitHubRequest, Config
 import logging
 
 # Configure logging

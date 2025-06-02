@@ -64,7 +64,7 @@ cp .env.example .env
 # Edit .env with your credentials
 
 # 3. Run setup script
-python setup.py
+python scripts/setup.py
 
 # 4. Test the system
 python demo.py
@@ -145,24 +145,45 @@ curl -X POST http://localhost:5000/api/generate \
 
 ```
 github_email_crew/
-├── main.py              # Main CLI application
-├── web_app.py           # Flask web interface
-├── demo.py              # Demonstration script
-├── setup.py             # Installation and setup
-├── crew.py              # CrewAI orchestration
-├── agents.py            # AI agent definitions
-├── tasks.py             # Task definitions
-├── mcp_server.py        # GitHub MCP server
-├── email_service.py     # Email functionality
-├── config.py            # Configuration management
-├── utils.py             # Utility functions
-├── test_suite.py        # Comprehensive tests
-├── requirements.txt     # Python dependencies
-├── Makefile            # Project automation
-├── templates/
-│   └── index.html       # Web interface template
-├── ARCHITECTURE.md      # Technical documentation
-└── README.md           # This file
+├── main.py                           # Main CLI application
+├── web_app.py                        # Flask web interface
+├── requirements.txt                  # Python dependencies
+├── requirements-dev.txt              # Development dependencies
+├── Makefile                         # Project automation
+├── README.md                        # This file
+├── .env.example                     # Environment template
+├── .gitignore                       # Git ignore rules
+├── src/
+│   └── github_release_generator/    # Main package
+│       ├── __init__.py              # Package initialization
+│       ├── agents.py                # AI agent definitions
+│       ├── tasks.py                 # Task definitions
+│       ├── crew.py                  # CrewAI orchestration
+│       ├── mcp_server.py            # GitHub MCP server
+│       ├── email_service.py         # Email functionality
+│       ├── config.py                # Configuration management
+│       └── utils.py                 # Utility functions
+├── tests/                           # Test suite
+│   ├── test_email.py                # Email service tests
+│   ├── test_suite.py                # Comprehensive tests
+│   └── verify.py                    # System verification
+├── examples/                        # Example scripts
+│   └── demo.py                      # Demonstration script
+├── scripts/                         # Setup and utility scripts
+│   └── setup.py                     # Installation script
+├── docs/                           # Documentation
+│   └── ARCHITECTURE.md             # Technical documentation
+├── templates/                       # Web interface templates
+│   └── index.html                   # Main web template
+├── .github/                        # GitHub templates and workflows
+│   ├── ISSUE_TEMPLATE/              # Issue templates
+│   │   ├── bug_report.yml           # Bug report template
+│   │   └── feature_request.yml      # Feature request template
+│   ├── pull_request_template.md     # PR template
+│   └── workflows/
+│       └── ci.yml                   # CI/CD pipeline
+├── logs/                           # Application logs
+└── temp/                           # Temporary files
 ```
 
 ## 🔧 Available Commands

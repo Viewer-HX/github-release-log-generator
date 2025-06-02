@@ -41,13 +41,13 @@ def main():
     files_to_check = [
         ("main.py", "Main application entry point"),
         ("web_app.py", "Flask web interface"),
-        ("crew.py", "CrewAI orchestration"),
-        ("agents.py", "AI agent definitions"),
-        ("tasks.py", "Task definitions"),
-        ("mcp_server.py", "MCP server implementation"),
-        ("email_service.py", "Email service"),
-        ("config.py", "Configuration management"),
-        ("utils.py", "Utility functions"),
+        ("src/github_release_generator/crew.py", "CrewAI orchestration"),
+        ("src/github_release_generator/agents.py", "AI agent definitions"),
+        ("src/github_release_generator/tasks.py", "Task definitions"),
+        ("src/github_release_generator/mcp_server.py", "MCP server implementation"),
+        ("src/github_release_generator/email_service.py", "Email service"),
+        ("src/github_release_generator/config.py", "Configuration management"),
+        ("src/github_release_generator/utils.py", "Utility functions"),
     ]
     
     for file_path, description in files_to_check:
@@ -60,7 +60,7 @@ def main():
         ("requirements.txt", "Python dependencies"),
         (".env.example", "Environment template"),
         ("README.md", "Project documentation"),
-        ("ARCHITECTURE.md", "Technical documentation"),
+        ("docs/ARCHITECTURE.md", "Technical documentation"),
         ("Makefile", "Project automation"),
     ]
     

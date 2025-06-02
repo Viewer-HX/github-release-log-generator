@@ -6,7 +6,7 @@ import asyncio
 from github import Github
 from github.Repository import Repository
 from github.Commit import Commit
-from config import Config, CommitDiff, AnalysisResult
+from .config import Config, CommitDiff, AnalysisResult
 
 logger = logging.getLogger(__name__)
 

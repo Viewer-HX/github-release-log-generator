@@ -3,8 +3,8 @@ from crewai.tools import BaseTool
 from typing import Any, Dict
 from pydantic import BaseModel, Field
 import json
-from mcp_server import github_mcp
-from config import Config
+from .mcp_server import github_mcp
+from .config import Config
 
 class GitHubAnalyzerTool(BaseTool):
     """Tool for analyzing GitHub repository changes"""

@@ -6,8 +6,9 @@ Tests the email functionality directly without the full CrewAI system
 
 import os
 import sys
-from email_service import EmailService
-from config import Config
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from src.github_release_generator.email_service import EmailService
+from src.github_release_generator.config import Config
 
 def test_email_connection():
     """Test email connection and sending"""

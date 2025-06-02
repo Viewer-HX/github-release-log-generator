@@ -9,9 +9,9 @@ import sys
 import asyncio
 from typing import Optional
 import argparse
-from crew import create_release_log_crew
-from config import GitHubRequest, Config
-from email_service import email_service
+from src.github_release_generator.crew import create_release_log_crew
+from src.github_release_generator.config import GitHubRequest, Config
+from src.github_release_generator.email_service import email_service
 
 # Configure logging
 logging.basicConfig(

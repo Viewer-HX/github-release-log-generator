@@ -6,8 +6,11 @@ Demonstrates the system with example data
 
 import asyncio
 import logging
-from crew import create_release_log_crew
-from config import GitHubRequest, Config
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from src.github_release_generator.crew import create_release_log_crew
+from src.github_release_generator.config import GitHubRequest, Config
 
 # Configure logging for demo
 logging.basicConfig(level=logging.INFO)

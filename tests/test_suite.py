@@ -12,11 +12,11 @@ import sys
 import os
 
 # Add the project root to the path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
-from config import Config, GitHubRequest, CommitDiff, AnalysisResult
-from utils import GitHubUtils, EmailUtils, ReleaseLogUtils, ConfigValidator
-from email_service import EmailService
+from src.github_release_generator.config import Config, GitHubRequest, CommitDiff, AnalysisResult
+from src.github_release_generator.utils import GitHubUtils, EmailUtils, ReleaseLogUtils, ConfigValidator
+from src.github_release_generator.email_service import EmailService
 
 class TestConfig(unittest.TestCase):
     """Test configuration functionality"""

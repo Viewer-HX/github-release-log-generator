@@ -3,20 +3,20 @@ from crewai.tools import BaseTool
 import logging
 from typing import Dict, Any
 import json
-from agents import (
+from .agents import (
     create_github_analyzer_agent,
     create_code_analysis_agent,
     create_release_log_generator_agent,
     create_email_sender_agent
 )
-from tasks import (
+from .tasks import (
     create_github_analysis_task,
     create_code_analysis_task,
     create_release_log_task,
     create_email_sending_task
 )
-from email_service import email_service
-from config import Config, GitHubRequest
+from .email_service import email_service
+from .config import Config, GitHubRequest
 
 logger = logging.getLogger(__name__)
 

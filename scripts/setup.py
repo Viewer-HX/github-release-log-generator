@@ -72,9 +72,16 @@ def verify_installation():
         print("✅ All main dependencies imported successfully")
         
         # Check configuration
-        from config import Config
+        sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
+        from github_release_generator.config import Config
         config = Config()
         print("✅ Configuration module loaded successfully")
+        
+        # Test main entry points
+        sys.path.insert(0, str(Path(__file__).parent.parent))
+        import main
+        import web_app
+        print("✅ Main entry points loaded successfully")
         
         return True
     except ImportError as e:

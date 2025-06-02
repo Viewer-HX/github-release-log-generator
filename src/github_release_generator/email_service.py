@@ -6,7 +6,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 import logging
 from typing import Optional
-from config import Config
+from .config import Config
 from datetime import datetime
 
 logger = logging.getLogger(__name__)
